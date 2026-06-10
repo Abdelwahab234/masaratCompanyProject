@@ -1,0 +1,143 @@
+.section {
+  background: #ffffff;
+  padding: 5rem 1.25rem;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.timelineContainer {
+  position: relative;
+  margin: 6rem 0;
+  padding: 2rem 0;
+}
+
+.timelineLineBg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: rgba(22, 182, 200, 0.1);
+  transform: translateX(-50%);
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.timelineLineFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #16B6C8;
+  transform: translateX(-50%);
+  transform-origin: top;
+  box-shadow: 0 0 15px rgba(22, 182, 200, 0.8);
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.nodesWrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.nodeRow:last-child {
+  margin-bottom: 0;
+}
+
+.nodeRowEven {
+  flex-direction: row-reverse;
+}
+
+.emptySpace {
+  width: 45%;
+}
+
+.nodeContent {
+  width: 45%;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px rgba(6, 35, 56, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.nodeIconWrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.nodeIconBox {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  /* background, shadow, and scale are handled by framer-motion variants */
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #062338;
+  margin-bottom: 0.75rem;
+}
+
+.cardText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .timelineContainer {
+    margin: 4rem 0;
+  }
+  
+  .timelineLineBg, .timelineLineFill {
+    left: 24px;
+    transform: none;
+  }
+
+  .nodeRow, .nodeRowEven {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 5rem; /* Space for the line and icon */
+    margin-bottom: 3rem;
+  }
+
+  .nodeIconWrapper {
+    left: 24px;
+    top: 2rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .nodeContent {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .emptySpace {
+    display: none;
+  }
+}

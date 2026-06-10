@@ -1,0 +1,105 @@
+.loaderContainer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #062338;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loaderContainer::before,
+.loaderContainer::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.loaderContainer::before {
+  width: 50vw;
+  height: 50vw;
+  background: #16B6C8;
+  top: -20vw;
+  left: -20vw;
+}
+
+.loaderContainer::after {
+  width: 40vw;
+  height: 40vw;
+  background: rgba(22, 182, 200, 0.4);
+  bottom: -15vw;
+  right: -15vw;
+}
+
+.loaderContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoContainer {
+  position: relative;
+  width: 400px;
+  max-width: 80vw;
+  height: 240px;
+  max-height: 30vh;
+  margin-bottom: 1rem;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.companyPrefix {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #16B6C8;
+  margin: 0;
+}
+
+.companyName {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #16B6C8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 1rem auto;
+}
+
+.loadingText {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-top: 1rem;
+}
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

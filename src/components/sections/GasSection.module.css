@@ -1,0 +1,238 @@
+.section {
+  padding: 5rem 1.25rem;
+  background: #F5FAFC;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.timelineContainer {
+  position: relative;
+  margin: 6rem 0;
+  padding: 2rem 0;
+}
+
+.timelineLineBg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: rgba(22, 182, 200, 0.1);
+  transform: translateX(-50%);
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.timelineLineFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #16B6C8;
+  transform: translateX(-50%);
+  transform-origin: top;
+  box-shadow: 0 0 15px rgba(22, 182, 200, 0.8);
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.nodesWrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.nodeRow:last-child {
+  margin-bottom: 0;
+}
+
+.nodeRowEven {
+  flex-direction: row-reverse;
+}
+
+.emptySpace {
+  width: 45%;
+}
+
+.nodeContent {
+  width: 45%;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px rgba(6, 35, 56, 0.05);
+  border: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.nodeImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.nodeImage {
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.nodeIconWrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.nodeIconBox {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #062338;
+}
+
+/* Components Section */
+.componentsBox {
+  margin-top: 5rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(148, 163, 184, 0.08);
+}
+
+.componentsTitle {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #062338;
+  text-align: center;
+}
+
+.componentsGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .componentsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .componentsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.componentCard {
+  border-radius: 1.5rem;
+  border: 1px solid #f1f5f9;
+  background: #F5FAFC;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.componentCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(22, 182, 200, 0.1);
+  border-color: #cffafe;
+}
+
+.componentImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 1.25rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.componentImage {
+  object-fit: contain;
+  padding: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.componentCard:hover .componentImage {
+  transform: scale(1.05);
+}
+
+.componentName {
+  font-weight: 900;
+  color: #062338;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timelineContainer {
+    margin: 4rem 0;
+  }
+  
+  .timelineLineBg, .timelineLineFill {
+    left: 24px;
+    transform: none;
+  }
+
+  .nodeRow, .nodeRowEven {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .nodeIconWrapper {
+    left: 24px;
+    top: 2rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .nodeContent {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .emptySpace {
+    display: none;
+  }
+
+  .componentsBox {
+    padding: 1.5rem;
+  }
+}

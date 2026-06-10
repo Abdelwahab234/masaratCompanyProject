@@ -1,0 +1,107 @@
+.section {
+  background: #ffffff;
+  padding: 5rem 1.25rem;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.marqueeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  /* Adds a fade out effect on left and right edges */
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marqueeRow {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+}
+
+.marqueeRow.reverse {
+  animation-direction: reverse;
+}
+
+.marqueeRow:hover {
+  animation-play-state: paused;
+}
+
+.marqueeGroup {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1.5rem; /* Gap between the end of group 1 and start of group 2 */
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marqueeItem {
+  width: 260px;
+  height: 120px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 15px rgba(148, 163, 184, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.marqueeItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(148, 163, 184, 0.15);
+}
+
+.marqueeImage {
+  object-fit: contain;
+  padding: 0.5rem;
+}
+
+.subSection {
+  margin-bottom: 5rem;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.subSection:last-child {
+  margin-bottom: 0;
+}
+
+.subTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #062338;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.subTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: #16B6C8;
+  border-radius: 2px;
+}

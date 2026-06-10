@@ -1,0 +1,107 @@
+.section {
+  padding: 5rem 1.25rem;
+  background: #F5FAFC;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border-radius: 2rem;
+  background: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(148, 163, 184, 0.15);
+}
+
+.cardDark {
+  background: #062338;
+}
+
+.iconCyan {
+  margin-bottom: 1.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #16B6C8;
+}
+
+.iconYellow {
+  margin-bottom: 1.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #F3B335;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #062338;
+}
+
+.cardTitleWhite {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.cardText {
+  margin-top: 1rem;
+  line-height: 2;
+  color: #475569;
+}
+
+.goalsList {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.goalItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.check {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #16B6C8;
+}
+
+.valuesGrid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.valueChip {
+  border-radius: 1rem;
+  border: 1px solid #cffafe;
+  background: #ecfeff;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 900;
+  color: #062338;
+  font-size: 0.9rem;
+}

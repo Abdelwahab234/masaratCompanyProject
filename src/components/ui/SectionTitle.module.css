@@ -1,0 +1,27 @@
+.wrapper {
+  margin: 0 auto 2.5rem;
+  max-width: 48rem;
+  text-align: center;
+}
+
+.kicker {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #16B6C8;
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #062338;
+  line-height: 1.2;
+}
+
+.text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 2;
+  color: #475569;
+}

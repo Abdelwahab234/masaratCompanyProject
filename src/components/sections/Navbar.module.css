@@ -1,0 +1,179 @@
+.header {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(6, 35, 56, 0.9);
+  backdrop-filter: blur(20px);
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brandIcon {
+  display: flex;
+  height: 4rem;
+  /* width: auto; Let the image width dictate if needed, but we set width in Image */
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  object-fit: contain;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+
+.brandName {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.brandSub {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #cffafe;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #16B6C8;
+}
+
+.actions {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .actions {
+    display: flex;
+  }
+}
+
+.langBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.langBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.callBtn {
+  border-radius: 9999px;
+  background: #16B6C8;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(22, 182, 200, 0.3);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.callBtn:hover {
+  background: #11A1B1;
+  transform: translateY(-2px);
+}
+
+.mobileActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .mobileActions {
+    display: none;
+  }
+}
+
+.mobileLangBtn {
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+.menuBtn {
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenu {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #062338;
+  padding: 1rem 1.25rem;
+}
+
+.mobileLink {
+  display: block;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.mobileLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

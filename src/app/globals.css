@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #F5FAFC;
+  color: #1e293b;
+  font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings font weight */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* RTL (Arabic) font preference */
+[dir="rtl"] {
+  font-family: 'Tajawal', Tahoma, system-ui, sans-serif;
+}
+
+/* LTR (English) font preference - enforce system-ui globally */
+[dir="ltr"], [dir="ltr"] * {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+}
+
+*::selection {
+  background-color: #005a6600;
+}
